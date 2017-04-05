@@ -1,5 +1,5 @@
 ﻿$FirewallRuleGroups = [PSCustomObject][Ordered] @{
-    Name = "BartenderCommander"
+    Name = "BasicVM"
     FirewallRule = @"
 vm-monitoring-dcom
 vm-monitoring-icmpv4
@@ -47,6 +47,14 @@ WMI-WINMGMT-In-TCP
 RemoteFwAdmin-In-TCP
 RemoteFwAdmin-RPCSS-In-TCP
 "@ -split "`r`n" 
+},
+[PSCustomObject][Ordered] @{
+    Name = "BartenderCommander"
+    FirewallRuleGroupsToImport = "BasicVM" 
+},
+[PSCustomObject][Ordered] @{
+    Name = "Progistics"
+    FirewallRuleGroupsToImport = "BasicVM" 
 }
 
 function Get-TervisNetFirewallGroup {
@@ -62,8 +70,24 @@ function Enable-TervisNetFirewallRuleGroup {
         [Parameter(Mandatory)]$ComputerName,
         $Credential = [System.Management.Automation.PSCredential]::Empty
     )
-    $FirewallGroup = Get-TervisNetFirewallGroup -Name $Name
-    Enable-NetFirewallRule -ComputerName $ComputerName -Credential $Credential -name $FirewallGroup.FirewallRule
+    $FirewallRuleNames = $Name |
+    Get-TervisNetFirewallGroupRule |
+    Sort-Object -Unique
+
+    Enable-NetFirewallRule -ComputerName $ComputerName -Credential $Credential -Name $FirewallRuleNames
+}
+
+function Get-TervisNetFirewallGroupRule {
+    param (
+        [Parameter(Mandatory, ValueFromPipeline)]$Name
+    )
+    process {
+        $FirewallGroup = Get-TervisNetFirewallGroup -Name $Name
+        if ($FirewallGroup.FirewallRuleGroupsToImport) {
+            $FirewallGroup.FirewallRuleGroupsToImport | Get-TervisNetFirewallGroupRule
+        }
+        $FirewallGroup.FirewallRule
+    }
 }
 
 function Enable-NetFirewallRule {
