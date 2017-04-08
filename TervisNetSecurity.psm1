@@ -113,3 +113,27 @@ function Compare-NetFirewallRuleBetweenComputers {
     $DifferenceRules = invoke-command -ScriptBlock {get-netfirewallrule} -ComputerName $DifferenceComputer
     Compare-Object -ReferenceObject $ReferenceRules -DifferenceObject $DifferenceRules -Property Name,Enabled
 }
+
+function New-TervisFirewallRule {
+    param (
+        [Parameter(Mandatory,ValueFromPipelineByPropertyName)]$ComputerName,
+        [Parameter(Mandatory)]$DisplayName,
+        [Parameter(Mandatory)]$LocalPort,
+        [Parameter(Mandatory)]$Name,
+        [Parameter(Mandatory)]$Group,
+        $Direction = "Inbound",
+        $Action = "Allow",
+        $Protocol = "TCP"
+    )
+    begin {
+        $FirewallSplatVariable = New-SplatVariable -Invocation $MyInvocation -Variables (Get-Variable) -ExcludeProperty ComputerName
+    }
+    process {
+        Invoke-Command -ComputerName $ComputerName {
+            $FirewallRule = Get-NetFirewallRule -DisplayName $Using:DisplayName -ErrorAction SilentlyContinue
+            if (-not $FirewallRule) {                
+                New-NetFirewallRule @Using:FirewallSplatVariable
+            }
+        }
+    }
+}
