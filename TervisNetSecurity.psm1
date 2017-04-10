@@ -55,6 +55,10 @@ RemoteFwAdmin-RPCSS-In-TCP
 [PSCustomObject][Ordered] @{
     Name = "Progistics"
     FirewallRuleGroupsToImport = "BasicVM" 
+},
+[PSCustomObject][Ordered] @{
+    Name = "WCSJavaApplication"
+    FirewallRuleGroupsToImport = "BasicVM" 
 }
 
 function Get-TervisNetFirewallGroup {
