@@ -63,6 +63,10 @@ RemoteFwAdmin-RPCSS-In-TCP
 [PSCustomObject][Ordered] @{
     Name = "PrintServer"
     FirewallRuleGroupsToImport = "BasicVM" 
+},
+[PSCustomObject][Ordered] @{
+    Name = "DirectAccess"
+    FirewallRuleGroupsToImport = "BasicVM" 
 }
 
 function Get-TervisNetFirewallGroup {
