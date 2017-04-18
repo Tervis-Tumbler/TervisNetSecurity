@@ -53,6 +53,10 @@ RemoteFwAdmin-RPCSS-In-TCP
     FirewallRuleGroupsToImport = "BasicVM" 
 },
 [PSCustomObject][Ordered] @{
+    Name = "BartenderLicenseServer"
+    FirewallRuleGroupsToImport = "BasicVM" 
+},
+[PSCustomObject][Ordered] @{
     Name = "Progistics"
     FirewallRuleGroupsToImport = "BasicVM" 
 },
