@@ -133,7 +133,7 @@ function New-TervisFirewallRule {
         [Parameter(Mandatory)]$LocalPort,
         [Parameter(Mandatory)]$Name,
         [Parameter(Mandatory)]$Group,
-        $Direction = "Inbound",
+        [ValidateSet("Inbound","Outbound")]$Direction = "Inbound",
         $Action = "Allow",
         $Protocol = "TCP"
     )
