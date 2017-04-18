@@ -134,7 +134,7 @@ function New-TervisFirewallRule {
         [Parameter(Mandatory)]$Name,
         [Parameter(Mandatory)]$Group,
         [ValidateSet("Inbound","Outbound")]$Direction = "Inbound",
-        $Action = "Allow",
+        [ValidateSet("Allow","Block","NotConfigured")]$Action = "Allow",
         $Protocol = "TCP"
     )
     begin {
