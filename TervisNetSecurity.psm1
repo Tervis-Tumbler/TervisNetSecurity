@@ -147,17 +147,19 @@ function New-TervisFirewallRule {
         [Parameter(Mandatory)]$Group,
         [ValidateSet("Inbound","Outbound")]$Direction = "Inbound",
         [ValidateSet("Allow","Block","NotConfigured")]$Action = "Allow",
-        $Protocol = "TCP"
+        $Protocol = "TCP",
+        [Switch]$Force
     )
     begin {
-        $FirewallSplatVariable = New-SplatVariable -Invocation $MyInvocation -Variables (Get-Variable) -ExcludeProperty ComputerName
+        $FirewallSplatVariable = New-SplatVariable -Invocation $MyInvocation -Variables (Get-Variable) -ExcludeProperty ComputerName,Force
     }
     process {
-        Invoke-Command -ComputerName $ComputerName {
-            $FirewallRule = Get-NetFirewallRule -DisplayName $Using:DisplayName -ErrorAction SilentlyContinue
-            if (-not $FirewallRule) {                
-                New-NetFirewallRule @Using:FirewallSplatVariable
-            }
+        $CimSession = New-CimSession -ComputerName $ComputerName
+        $FirewallRule = Get-NetFirewallRule -DisplayName $DisplayName -ErrorAction SilentlyContinue -CimSession $CimSession
+        if (-not $FirewallRule -or $Force) {
+            Remove-NetFirewallRule -Name $Name -ErrorAction SilentlyContinue -CimSession $CimSession
+            New-NetFirewallRule @FirewallSplatVariable -CimSession $CimSession
         }
+        Remove-CimSession -CimSession $CimSession
     }
 }
