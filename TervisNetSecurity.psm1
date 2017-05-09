@@ -50,39 +50,39 @@ RemoteFwAdmin-RPCSS-In-TCP
 },
 [PSCustomObject][Ordered] @{
     Name = "BartenderCommander"
-    FirewallRuleGroupsToImport = "BasicVM" 
+    FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
     Name = "BartenderLicenseServer"
-    FirewallRuleGroupsToImport = "BasicVM" 
+    FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
     Name = "Progistics"
-    FirewallRuleGroupsToImport = "BasicVM" 
+    FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
     Name = "WCSJavaApplication"
-    FirewallRuleGroupsToImport = "BasicVM" 
+    FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
     Name = "PrintServer"
-    FirewallRuleGroupsToImport = "BasicVM" 
+    FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
     Name = "DirectAccess"
-    FirewallRuleGroupsToImport = "BasicVM" 
+    FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
     Name = "SCDPM2016"
-    FirewallRuleGroupsToImport = "BasicVM" 
+    FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
     Name = "WindowsFileserver"
-    FirewallRuleGroupsToImport = "BasicVM" 
+    FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
     Name = "KafkaBroker"
-    FirewallRuleGroupsToImport = "BasicVM" 
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 function Get-TervisNetFirewallGroup {
