@@ -93,6 +93,10 @@ RemoteFwAdmin-RPCSS-In-TCP
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
+    Name = "OraDBARMTDkt"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
     Name = "StoresRemoteDesktop"
     FirewallRuleGroupsToImport = "BasicVM"
 }
