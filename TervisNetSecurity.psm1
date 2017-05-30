@@ -87,6 +87,10 @@ RemoteFwAdmin-RPCSS-In-TCP
 [PSCustomObject][Ordered] @{
     Name = "Phishing"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "RemoteWebBrowserApp"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 [PSCustomObject][Ordered] @{
     Name = "OraDBARMTDkt"
