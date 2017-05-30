@@ -93,7 +93,7 @@ RemoteFwAdmin-RPCSS-In-TCP
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
-    Name = "OraDBARMT"
+    Name = "OracleDBA Remote Desktop"
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
