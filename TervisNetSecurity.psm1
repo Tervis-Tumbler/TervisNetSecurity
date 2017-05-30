@@ -88,6 +88,11 @@ RemoteFwAdmin-RPCSS-In-TCP
     Name = "Phishing"
     FirewallRuleGroupsToImport = "BasicVM"
 }
+[PSCustomObject][Ordered] @{
+    Name = "OraDBARMTDkt"
+    FirewallRuleGroupsToImport = "BasicVM"
+}
+
 
 function Get-TervisNetFirewallGroup {
     param (
