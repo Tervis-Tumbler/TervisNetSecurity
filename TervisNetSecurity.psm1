@@ -91,12 +91,11 @@ RemoteFwAdmin-RPCSS-In-TCP
 [PSCustomObject][Ordered] @{
     Name = "RemoteWebBrowserApp"
     FirewallRuleGroupsToImport = "BasicVM"
-}
+},
 [PSCustomObject][Ordered] @{
-    Name = "OraDBARMTDkt"
+    Name = "StoresRemoteDesktop"
     FirewallRuleGroupsToImport = "BasicVM"
 }
-
 
 function Get-TervisNetFirewallGroup {
     param (
