@@ -77,6 +77,10 @@ RemoteFwAdmin-RPCSS-In-TCP
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
+    Name = "ScheduledTasks"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
     Name = "WindowsFileserver"
     FirewallRuleGroupsToImport = "BasicVM"
 },
