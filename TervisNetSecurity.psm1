@@ -103,6 +103,10 @@ RemoteFwAdmin-RPCSS-In-TCP
 [PSCustomObject][Ordered] @{
     Name = "StoresRemoteDesktop"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "RMSHQManagerRemoteApp"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 function Get-TervisNetFirewallGroup {
