@@ -111,6 +111,10 @@ RemoteFwAdmin-RPCSS-In-TCP
 [PSCustomObject][Ordered] @{
     Name = "KeyscanRemoteApp"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "WCSRemoteApp"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 function Get-TervisNetFirewallGroup {
