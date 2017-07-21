@@ -129,6 +129,14 @@ RemoteFwAdmin-RPCSS-In-TCP
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
+    Name = "HyperVCluster5"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "HyperVCluster6"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
     Name = "WindowsApps"
     FirewallRuleGroupsToImport = "BasicVM"
 }
