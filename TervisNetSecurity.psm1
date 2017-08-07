@@ -129,6 +129,10 @@ RemoteFwAdmin-RPCSS-In-TCP
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
+    Name = "SCDPM2016SQL"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
     Name = "DataLoadClassic"
     FirewallRuleGroupsToImport = "BasicVM"
 },
