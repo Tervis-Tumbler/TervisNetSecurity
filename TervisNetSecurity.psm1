@@ -163,7 +163,12 @@ RemoteFwAdmin-RPCSS-In-TCP
 [PSCustomObject][Ordered] @{
     Name = "EMC Storage Integrator for Windows Suite"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "iSNS"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
+
 
 function Get-TervisNetFirewallGroup {
     param (
