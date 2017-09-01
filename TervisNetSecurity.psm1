@@ -167,8 +167,11 @@ RemoteFwAdmin-RPCSS-In-TCP
 [PSCustomObject][Ordered] @{
     Name = "iSNS"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "SQL Anywhere"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
-
 
 function Get-TervisNetFirewallGroup {
     param (
