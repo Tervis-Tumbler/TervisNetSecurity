@@ -49,6 +49,13 @@ RemoteFwAdmin-RPCSS-In-TCP
 "@ -split "`r`n" 
 },
 [PSCustomObject][Ordered] @{
+    Name = "HyperVReplica"
+    FirewallRule = @"
+VIRT-HVRHTTPL-In-TCP-NoScope
+VIRT-HVRHTTPSL-In-TCP-NoScope
+"@ -split "`r`n" 
+},
+[PSCustomObject][Ordered] @{
     Name = "BartenderCommander"
     FirewallRuleGroupsToImport = "BasicVM"
 },
@@ -138,19 +145,19 @@ RemoteFwAdmin-RPCSS-In-TCP
 },
 [PSCustomObject][Ordered] @{
     Name = "HyperVCluster5"
-    FirewallRuleGroupsToImport = "BasicVM"
+    FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
 },
 [PSCustomObject][Ordered] @{
     Name = "HyperVCluster6"
-    FirewallRuleGroupsToImport = "BasicVM"
+    FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
 },
 [PSCustomObject][Ordered] @{
     Name = "VDICluster1"
-    FirewallRuleGroupsToImport = "BasicVM"
+    FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
 },
 [PSCustomObject][Ordered] @{
     Name = "StandaloneHyperVServer"
-    FirewallRuleGroupsToImport = "BasicVM"
+    FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
 },
 [PSCustomObject][Ordered] @{
     Name = "WindowsApps"
