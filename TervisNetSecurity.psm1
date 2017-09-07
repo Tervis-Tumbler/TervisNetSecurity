@@ -190,14 +190,16 @@ function Get-TervisNetFirewallGroup {
 function Enable-TervisNetFirewallRuleGroup {
     param (
         $Name,
-        [Parameter(Mandatory)]$ComputerName,
+        [Parameter(Mandatory,ValueFromPipelineByPropertyName)]$ComputerName,
         $Credential = [System.Management.Automation.PSCredential]::Empty
     )
-    $FirewallRuleNames = $Name |
-    Get-TervisNetFirewallGroupRule |
-    Sort-Object -Unique
+    process {
+        $FirewallRuleNames = $Name |
+        Get-TervisNetFirewallGroupRule |
+        Sort-Object -Unique
 
-    Enable-NetFirewallRule -ComputerName $ComputerName -Credential $Credential -Name $FirewallRuleNames
+        Enable-NetFirewallRule -ComputerName $ComputerName -Credential $Credential -Name $FirewallRuleNames
+    }
 }
 
 function Get-TervisNetFirewallGroupRule {
