@@ -182,6 +182,14 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "RemoteDesktopLicensing"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "ADFS"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "ADFSProxy"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 function Get-TervisNetFirewallGroup {
