@@ -204,7 +204,7 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
-    Name = "SCCM 2016"
+    Name = "SCCM2016"
     FirewallRuleGroupsToImport = "BasicVM"
 }
 
