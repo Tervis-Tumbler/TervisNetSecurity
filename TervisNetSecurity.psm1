@@ -140,6 +140,10 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
+    Name = "SCDPMOraBackups"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
     Name = "DataLoadClassic"
     FirewallRuleGroupsToImport = "BasicVM"
 },
