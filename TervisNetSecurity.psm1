@@ -172,6 +172,14 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
+    Name = "EBSBusinessIntelligenceRemoteApp"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "EBSDiscovererRemoteApp"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
     Name = "EMC Storage Integrator for Windows Suite"
     FirewallRuleGroupsToImport = "BasicVM"
 },
