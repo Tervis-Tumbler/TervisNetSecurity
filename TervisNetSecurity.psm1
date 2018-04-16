@@ -240,7 +240,7 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
-    Name = "WinAdmin"
+    Name = "WindowsAdminCenterGateway"
     FirewallRuleGroupsToImport = "BasicVM"
 }
 
