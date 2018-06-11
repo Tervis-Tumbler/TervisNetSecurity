@@ -246,6 +246,10 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "AzureADConnector"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "UniversalDashboard"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 function Get-TervisNetFirewallGroup {
