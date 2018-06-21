@@ -250,6 +250,10 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "UniversalDashboard"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "CertificateAuthority"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 function Get-TervisNetFirewallGroup {
