@@ -258,6 +258,10 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject]@{
     Name = "nChannelSyncManager"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "Passwordstate"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 function Get-TervisNetFirewallGroup {
