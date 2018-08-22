@@ -262,7 +262,12 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "Passwordstate"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "NestedHyperVCluster"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
+
 
 function Get-TervisNetFirewallGroup {
     param (
