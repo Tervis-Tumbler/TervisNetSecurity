@@ -270,6 +270,10 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "Windows Subsystem for Linux Server"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "Sylint"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 
