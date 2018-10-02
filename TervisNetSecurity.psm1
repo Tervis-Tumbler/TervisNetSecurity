@@ -274,6 +274,10 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "Sylint"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "Jetrion"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 
