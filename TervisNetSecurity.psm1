@@ -276,7 +276,7 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
-    Name = "Jetrion"
+    Name = "InDesign"
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
