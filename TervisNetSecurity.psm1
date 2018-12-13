@@ -294,6 +294,10 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "AzureMFANPS"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "StoresRegister"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
 
 
