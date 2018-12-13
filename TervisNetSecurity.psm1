@@ -370,6 +370,7 @@ function New-TervisFirewallRule {
         [ValidateSet("Inbound","Outbound")]$Direction = "Inbound",
         [ValidateSet("Allow","Block","NotConfigured")]$Action = "Allow",
         $Protocol = "TCP",
+        $RemoteAddress,
         [Switch]$Force
     )
     begin {
