@@ -298,4 +298,8 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "StoresRegister"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "Exchange"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
