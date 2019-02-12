@@ -306,4 +306,8 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "ExcelTask"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "DomainJoin"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
