@@ -156,6 +156,14 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
     FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
 },
 [PSCustomObject][Ordered] @{
+    Name = "HyperVCluster5Evergreen"
+    FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
+},
+[PSCustomObject][Ordered] @{
+    Name = "HyperVCluster6Evergreen"
+    FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
+},
+[PSCustomObject][Ordered] @{
     Name = "VDICluster1"
     FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
 },
