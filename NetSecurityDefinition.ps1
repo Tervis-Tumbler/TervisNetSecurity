@@ -330,4 +330,8 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "DomainJoin"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "ShopifyInterface"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
