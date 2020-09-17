@@ -312,10 +312,70 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
+    Name = "VPNTest"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "AlwaysOn"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "VendorVPN"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
     Name = "ExcelTask"
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
     Name = "DomainJoin"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "ShopifyInterface"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "RemoteDesktopGateway"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "RemoteDesktopBroker"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "RemoteDesktopWebAccess"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "RDPJumpBox"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "FedExShipManagerServer"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "HyperVCluster7"
+    FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
+},
+[PSCustomObject][Ordered] @{
+    Name = "RiminiSupport"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "OracleDR"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "AcronisFileServer"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "SCOM2019"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "ChannelAdvisor"
     FirewallRuleGroupsToImport = "BasicVM"
 }
