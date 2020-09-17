@@ -318,32 +318,4 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "DomainJoin"
     FirewallRuleGroupsToImport = "BasicVM"
-},
-[PSCustomObject][Ordered] @{
-    Name = "FedExShipManagerServer"
-    FirewallRuleGroupsToImport = "BasicVM"
-},
-[PSCustomObject][Ordered] @{
-    Name = "HyperVCluster7"
-    FirewallRuleGroupsToImport = "BasicVM","HyperVReplica"
-},
-[PSCustomObject][Ordered] @{
-    Name = "RiminiSupport"
-    FirewallRuleGroupsToImport = "BasicVM"
-},
-[PSCustomObject][Ordered] @{
-    Name = "OracleDR"
-    FirewallRuleGroupsToImport = "BasicVM"
-},
-[PSCustomObject][Ordered] @{
-    Name = "AcronisFileServer"
-    FirewallRuleGroupsToImport = "BasicVM"
-},
-[PSCustomObject][Ordered] @{
-    Name = "SCOM2019"
-    FirewallRuleGroupsToImport = "BasicVM"
-},
-[PSCustomObject][Ordered] @{
-    Name = "ChannelAdvisor"
-    FirewallRuleGroupsToImport = "BasicVM"
 }
