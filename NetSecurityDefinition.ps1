@@ -386,4 +386,8 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "SCDPM2019"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "Adaptive"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
