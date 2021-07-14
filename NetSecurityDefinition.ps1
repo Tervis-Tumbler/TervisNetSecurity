@@ -392,7 +392,10 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
     FirewallRuleGroupsToImport = "BasicVM"
 },
 [PSCustomObject][Ordered] @{
-SNMP-Service
     Name = "NavisionRemoteApp"
+    FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "2019FileServer"
     FirewallRuleGroupsToImport = "BasicVM"
 }
