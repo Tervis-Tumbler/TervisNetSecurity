@@ -406,4 +406,8 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "TMFSync"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "Packsize"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
