@@ -410,4 +410,8 @@ VIRT-HVRHTTPSL-In-TCP-NoScope
 [PSCustomObject][Ordered] @{
     Name = "Packsize"
     FirewallRuleGroupsToImport = "BasicVM"
+},
+[PSCustomObject][Ordered] @{
+    Name = "Solidworks"
+    FirewallRuleGroupsToImport = "BasicVM"
 }
